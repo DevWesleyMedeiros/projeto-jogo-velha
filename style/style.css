@@ -74,12 +74,12 @@ div.buttons > button:hover{
     background-color: #c76e36;
     opacity: 0.2;
 }
-.image-circle{
+.imageO{
     display: none;
     width: 50px;
     height: 50px;
 }
-.image-x {
+.imageX {
     display: none;
     width: 50px;
     height: 50px;

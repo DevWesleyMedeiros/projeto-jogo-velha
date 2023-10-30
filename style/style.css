@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+body, html {
+    background-image: linear-gradient(90deg, #c76e36, #6c4e3b, #453328, #27201b);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+div.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 500px;
+    height: 100px;
+}
+div.buttons > button{
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    color: white;
+    background-color: #3c3026;
+    font-size: 20px;
+    font-weight: 800;
+}
+div.buttons > button:hover{
+    background-color: #1b1a19;
+    cursor: pointer;
+}
+.player_option {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    position: relative;
+}
+.player_option > .text {
+    border-bottom: 4px groove black;
+    width: 300px;
+    height: auto;
+    position: absolute;
+    bottom: -180%;
+}
+.player_option > .text > h2 {
+    text-align: center;
+}
+.container {
+    display: grid;
+    max-width: 1500px;
+    width: 100%;
+    max-height: 500px;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: none;
+    position: relative;
+    cursor: pointer;
+}
+.cell:hover{
+    background-color: #c76e36;
+    opacity: 0.2;
+}
+.image-circle{
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+.image-x {
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+.winner-message {
+    display: none;
+}
+.cell.x, .cell.circle{
+    cursor: not-allowed;
+}
+.cell:nth-child(3n) {
+    border-right: none;
+}
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+.cell:nth-last-child(1),
+.cell:nth-last-child(2),
+.cell:nth-last-child(3) {
+    border-bottom: none;
+}
